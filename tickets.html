@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Comprar tickets</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylecss.css">
+  
+</head>
+
+<body>
+
+<!--navbar-->   
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="codoacodo.png" alt="" width="80" class="d-inline-block align-text-center">Conf Bs As</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>      
+        
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disable" aria-current="page" href="#">Los oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disable" aria-current="page" href="#">El lugar y la fecha</a>
+          </li>  
+          <li class="nav.item">
+            <a class="nav-link disable" aria-current="page" href="#">Conviertete en orador</a>
+          </li>
+          <li class="nav.item">
+            <a class="nav-link link-success active" aria-current="page" href="tickets.html">Comprar tickets</a>
+          </li>
+        </ul>
+      </div>
+    
+  </nav>
+
+<!--costos y descuentos-->
+
+  <div class="d-flex justify-content-center mb-3 mt-4">
+    <div class="card border-primary text-center mx-1 py-3" style="height:12rem; width:12rem;">
+      <div class="card-body">
+      <h4 class="card-title">Estudiante</h4>
+      <p class="card-text">Tienen un descuento <br> <b>80%</b></p>
+      <small class="text-muted">*presentar documentación</small>
+      </div> 
+    </div>
+    <div class="card border-success text-center mx-1 py-3" style="height:12rem; width:12rem;">
+      <div class="card-body">
+      <h4 class="card-title">Trainee</h4>
+      <p class="card-text">Tienen un descuento <br> <b>50%</b></p>
+      <small class="text-muted">*presentar documentación</small>
+      </div> 
+    </div>
+    <div class="card border-warning text-center mx-1 py-3" style="height:12rem; width:12rem;">
+      <div class="card-body">
+      <h4 class="card-title">Junior</h4>
+      <p class="card-text">Tienen un descuento <br> <b>15%</b></p>
+      <small class="text-muted">*presentar documentación</small>
+      </div> 
+    </div>
+  </div>
+      
+<!--formulario venta-->
+
+  <section class="d-flex justify-content-center">
+    <div>
+      <div>
+        <h6 class="text-center">Venta</h6>
+        <h1>VALOR  DEL  TICKET  $200</h1>
+      </div>
+      <div>
+        
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+            </div>
+          </div>
+          <div>
+            <div>
+              <input type="email" class="form-control" id="floatingInput" placeholder="Correo">
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col">
+              <label>Cantidad</label>
+              <input type="number" min="1" max="100" class="form-control cantidad" placeholder="Cantidad">
+            </div>
+            <div class="col-auto">
+              <label>Categoría</label>
+              <select class="form-select">
+                <option selected>Elige...</option>
+                <option value="sdec">Sin Descuento</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="trainee">Trainee</option>
+                <option value="junior">Junior</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card card-pago">
+            <div class="card-body">
+              Total a Pagar: $ <p id="pagar" name="pagar"></p>
+            </div>
+          </div>
+          
+          <div class="row my-3">
+            <div class="col">
+              <input class="btn btn-success text-light" type="reset" value="Borrar">
+            </div>
+            <div class="col">
+            <button id="bigb" nombre="bigb" type= "button" class="btn btn-success text-light">Resumen</button>
+            </div>
+          </div>
+          
+        
+        
+      </div>
+    </div>
+  </section>
+
+<script src="tickets.js"></script>  
+  
+<!--footer-->
+
+
+<footer class="fixed-bottom">
+    <ul class="nav justify-content-around align-items-center py-5">
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Preguntas <br>frecuentes</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Contáctanos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Prensa</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Conferencias</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Términos y<br>condiciones</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Privacidad</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-light px-2">Estudiantes</a></li>
+        </ul>
+  </footer> 
+
+
+
+</body>
+</html>
